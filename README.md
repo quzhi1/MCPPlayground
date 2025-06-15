@@ -25,7 +25,7 @@ pip install "huggingface_hub[mcp]>=0.32.0"
 huggingface-cli login
 ```
 
-## Gradio server
+## Simple Gradio server
 ### Installation
 ```bash
 pip install "gradio[mcp]"
@@ -35,3 +35,20 @@ pip install "gradio[mcp]"
 ```bash
 python gradio-server.py
 ```
+
+## Sentiment analysis server
+### Installation
+```bash
+source .venv/bin/activate
+cd python
+pip install "gradio[mcp]" textblob
+```
+
+### Run server
+```bash
+python app.py
+```
+Some useful URLs:
+1. UI: http://localhost:7860
+2. MCP server (SSE): http://127.0.0.1:7860/gradio_api/mcp/sse
+3. MCP schema: http://localhost:7860/gradio_api/mcp/schema
